@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.iclass.controller.Controller;
-import org.iclass.service.MemberService;
+import org.iclass.service.UserService;
 import org.iclass.vo.BG_USER;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +29,7 @@ public class LoginActionController implements Controller {
 		Map<String, String> map = new HashMap<>();
 		map.put("user_id", id);
 		map.put("user_password", password);
-		MemberService service = new MemberService();
+		UserService service = new UserService();
 		BG_USER user = service.login(map);
 		
 		String url= request.getContextPath();

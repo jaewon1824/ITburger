@@ -9,8 +9,8 @@ import org.iclass.vo.BG_USER;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MemberService {
-	private static final Logger logger = LoggerFactory.getLogger(MemberService.class);
+public class UserService {
+	private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 	private bg_userDao dao = bg_userDao.getInstance();
 	
 //	// password 해싱
