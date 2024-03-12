@@ -22,6 +22,7 @@
       <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">회원 탈퇴</h4>
+<<<<<<< HEAD
         <button type="button" class="btn-close" onclick="location.href='/DemoProj'"></button>
       </div>
 
@@ -33,6 +34,19 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" onclick="location.href='/DemoProj'">Close</button>
+=======
+        <button type="button" class="btn-close" onclick="location.href='/ITburger'"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        	<p>그동안 함께 해주셔서 감사합니다. 다음에 또 만나요.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" onclick="location.href='/ITburger'">Close</button>
+>>>>>>> branch 'master' of https://github.com/kimchman3342/ITburger.git
       </div>
 
     </div>
