@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="demomember">
+ 	<insert id="join" parameterType="org.iclass.vo.DemoMember">
+ 		insert into 
+ 		BG_USER(user_id,user_password,user_name,create_dttm)
+ 		values
+ 		(#{user_id},#{user_password},#{user_name},#{create_dttm})
+ 	</insert>
+ 
+ 	<select id="listAll" resultType="org.iclass.vo.BG_USER">
+ 		SELECT *
+ 		FROM
+ 			BG_USER
+ 	</select>
+ 	<select id="getById" resultType="org.iclass.vo.BG_USER" parameterType="String">
+ 		SELECT * 
+		FROM 
+			BG_USER
+		WHERE 
+			user_id=#{user_id} 
+ 	</select>
+	<select id="login" resultType="org.iclass.vo.BG_USER" parameterType="java.util.Map">
+		SELECT * 
+		FROM 
+			BG_USER
+		WHERE 
+			user_id=#{user_id} and user_password=#{user_password}
+	</select> 	
+	<update id="updatePassword" parameterType="java.util.Map">  <!-- 기존 패스워드를 해쉬값으로 변경하기 위해 사용(테스트용) -->
+		UPDATE BG_USER
+		SET user_password=#{user_password}
+		WHERE 
+			user_id=#{user_id}
+	</update>
+	<update id="modify" parameterType="org.iclass.vo.BG_USER">
+		UPDATE BG_USER
+		SET email=#{email},
+			phone=#{phone},
+			favorites=#{favorites},
+			address1=#{address1},
+			address2=#{address2},
+			address3=#{address3},
+			address4=#{address4},
+			postalCode=#{postalCode}
+	  WHERE
+	  		user_id=#{user_id}		
+	</update>
+	<delete id="drop">
+		DELETE FROM  BG_USER WHERE user_id=#{user_id}
+	</delete>
+ </mapper>
+ 
+ 
+ 
+ 
+ 
+ 
