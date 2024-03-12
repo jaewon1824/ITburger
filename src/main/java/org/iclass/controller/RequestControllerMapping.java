@@ -10,7 +10,7 @@ public class RequestControllerMapping {
 	private static final Map<RequestKeyValue,Controller> mapping = new HashMap<>();
 	
 	public static void init() {
-
+		
 	}
 	public static Controller getController(RequestKeyValue key) {
 		return mapping.get(key);
