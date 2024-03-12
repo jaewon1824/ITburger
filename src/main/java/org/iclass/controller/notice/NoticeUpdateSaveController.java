@@ -44,8 +44,10 @@ public class NoticeUpdateSaveController implements Controller {
 		
 		String temp=multiRequest.getParameter("idx");
 		int idx = Integer.parseInt(temp);
-		String title=multiRequest.getParameter("title");
-		String content=multiRequest.getParameter("content");
+		String notice_title=multiRequest.getParameter("notice_title");
+		String notice_content=multiRequest.getParameter("notice_content");
+		String notice_image=multiRequest.getParameter("notice_image");
+		
 		
 		String uploadFile = multiRequest.getParameter("uploadFile");
 		if(uploadFile !=null) {		//첨부된 파일을 수정하지 않은 경우
@@ -54,8 +56,9 @@ public class NoticeUpdateSaveController implements Controller {
 		}
 		Notice vo = Notice.builder()
 				.idx(idx)
-				.title(title)
-				.content(content)
+				.notice_title(notice_title)
+				.notice_content(notice_content)
+				.notice_content(notice_image)
 				.attachFile(attachfile)
 				.uploadFile(filename)
 				.build();

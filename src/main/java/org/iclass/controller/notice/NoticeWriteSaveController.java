@@ -43,12 +43,12 @@ public class NoticeWriteSaveController implements Controller {
 		//서버의 파일 시스템 C:\\upload 경로에서 파일이 생겼는지 확인하기
 		
 		
-		String title=multiRequest.getParameter("title");
-		String content=multiRequest.getParameter("content");
+		String notice_title=multiRequest.getParameter("notice_title");
+		String notice_content=multiRequest.getParameter("notice_content");
 		
 		Notice vo = Notice.builder()
-				.title(title)
-				.content(content)
+				.notice_title(notice_title)
+				.notice_content(notice_content)
 				.attachFile(attachfile)
 				.uploadFile(filename)
 				.build();
