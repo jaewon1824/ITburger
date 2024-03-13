@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="bg_menu">
+	 
+ 	<select id="menuList" resultType="org.iclass.vo.BG_MENU">
+ 		SELECT *
+ 		FROM
+ 			BG_MENU
+ 	</select>
+ 	
+ 	<select id="getOne" parameterType="String" resultType="org.iclass.vo.BG_MENU">
+ 		SELECT *
+ 		FROM
+ 			BG_MENU
+ 		WHERE menu_code = #{menu_code}
+ 	</select>
+ 	
+ 	<insert id="insert" parameterType="org.iclass.vo.BG_MENU">
+ 		INSERT INTO BG_MENU(menu_code,menu_name,menu_desc,price,create_dttm,img_name)
+ 		VALUES (#{menu_code},#{menu_name},#{menu_desc,jdbcType=VARCHAR},#{price},#{create_dttm,jdbcType=VARCHAR},#{img_name,jdbcType=VARCHAR})
+ 	</insert>
+ 	<!-- jdbcType=VARCHAR  와 같은 설정은 null 값을 저장할 때 꼭 해야 합니다. 
+ 	     pubdate는 db에서 널 허용 했으므로 값이 없어도 되며 그 때에는 pubdate 컬럼의 데이터 형식을 알려주는 내용입니다.
+ 	-->
+ </mapper>
+ 
+ 
+ 
+ 
+ 
+ 
