@@ -1,20 +1,9 @@
 package org.iclass.controller.notice;
 
 import java.io.IOException;
-<<<<<<< HEAD
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.iclass.controller.Controller;
-
-public class NoticeDeleteController implements Controller{
-	@Override
-	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+// TODO Auto-generated method stub
 		
-=======
 import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
@@ -59,7 +48,6 @@ public class NoticeDeleteController implements Controller {
 			response.sendRedirect(request.getContextPath());
 		}
 
->>>>>>> branch 'master' of https://github.com/kimchman3342/ITburger.git
 	}
 
 }

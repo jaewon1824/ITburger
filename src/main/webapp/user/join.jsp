@@ -326,10 +326,10 @@
     </script>
  </head>
 <body class="is-preload">
-	<%@include file="../layout/header-a.jsp" %>
+	<%@include file="../layout/header.jsp" %>
 	<div id="page-wrapper">
     <hr>
-  	<jsp:include page="joinagree.jsp"/>
+  	<jsp:include page="../joinagree.jsp"/>
     <hr>
     <%@include file="../layout/footer.jsp" %>
 </div>    
