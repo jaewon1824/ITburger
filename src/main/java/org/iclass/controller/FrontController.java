@@ -52,6 +52,9 @@ public class FrontController extends HttpServlet{
 	}
 
 
+<<<<<<< HEAD
 //css와 js도 요청에 대한 응답으로 처리해야 하므로 web.xml 에서 리소스에 대한 처리 설정
 
+=======
+>>>>>>> branch 'master' of https://github.com/kimchman3342/ITburger.git
 }

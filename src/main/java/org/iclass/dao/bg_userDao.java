@@ -8,7 +8,10 @@ import org.iclass.vo.BG_USER;
 
 
 public class bg_userDao {
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/kimchman3342/ITburger.git
 	private static bg_userDao dao = new bg_userDao();
 	private bg_userDao() {}
 	public static bg_userDao getInstance() {
@@ -70,5 +73,8 @@ public class bg_userDao {
 		
 	}
 	
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/kimchman3342/ITburger.git
 }
