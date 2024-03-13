@@ -13,12 +13,9 @@ import javax.servlet.http.HttpSession;
 import org.iclass.controller.Controller;
 import org.iclass.service.UserService;
 import org.iclass.vo.BG_USER;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 //new RequestKeyValue("/login", "POST")
 public class LoginActionController implements Controller {
-	private static final Logger logger = LoggerFactory.getLogger(LoginActionController.class);
 	@Override
 	public void handle(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {

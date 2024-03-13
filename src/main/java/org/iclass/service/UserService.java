@@ -13,17 +13,17 @@ public class UserService {
 	private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 	private bg_userDao dao = bg_userDao.getInstance();
 	
-//	// password 해싱
-//	public void join(BG_USER member) {
-//		try {
-//			String password = encrypt(member.getPassword());
-//			member.setPassword(password);
-//			dao.join(member);
-//		} catch (NoSuchAlgorithmException e) {
-//			e.printStackTrace();
-//		}
+////	// password 해싱
+	public void join(BG_USER user) {
+		try {
+			String password = encrypt(user.getUser_password());
+			user.setUser_password();
+			dao.join(user);
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
 				
-//	}
+	}
 	// password 해싱
 	public BG_USER login(Map<String,String> map) {
 		BG_USER result=null;

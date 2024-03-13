@@ -19,7 +19,7 @@
  	
  	<insert id="insert" parameterType="org.iclass.vo.BG_MENU">
  		INSERT INTO BG_MENU(menu_code,menu_name,menu_desc,price,create_dttm,img_name)
- 		VALUES (#{menu_code},#{menu_name},#{menu_desc,jdbcType=VARCHAR},#{price},#{create_dttm,jdbcType=VARCHAR},#{saleuser},#{price},#{img_name,jdbcType=VARCHAR})
+ 		VALUES (#{menu_code},#{menu_name},#{menu_desc,jdbcType=VARCHAR},#{price},#{create_dttm,jdbcType=VARCHAR},#{img_name,jdbcType=VARCHAR})
  	</insert>
  	<!-- jdbcType=VARCHAR  와 같은 설정은 null 값을 저장할 때 꼭 해야 합니다. 
  	     pubdate는 db에서 널 허용 했으므로 값이 없어도 되며 그 때에는 pubdate 컬럼의 데이터 형식을 알려주는 내용입니다.

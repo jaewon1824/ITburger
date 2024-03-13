@@ -7,15 +7,10 @@ import org.iclass.controller.user.LoginActionController;
 import org.iclass.controller.user.LoginViewController;
 
 
-
-
-
-
 public class RequestControllerMapping {
 	private static final Map<RequestKeyValue,Controller> mapping = new HashMap<>();
 	
 	public static void init() {
-<<<<<<< HEAD
 //		mapping.put(new RequestKeyValue("/notice/list", "GET"), new NoticeListController());
 //		mapping.put(new RequestKeyValue("/notice/read", "GET"), new NoticeReadController());
 //		mapping.put(new RequestKeyValue("/notice/write", "GET"), new NoticeWriteController());
@@ -24,10 +19,8 @@ public class RequestControllerMapping {
 //		mapping.put(new RequestKeyValue("/notice/update", "POST"), new NoticeUpdateSaveController());
 //		mapping.put(new RequestKeyValue("/notice/delete", "GET"), new NoticeDeleteController());
 //		mapping.put(new RequestKeyValue("/notice/download", "POST"), new NoticeFileDownloadController());
-=======
 		mapping.put(new RequestKeyValue("/login", "GET"), new LoginViewController());
 		mapping.put(new RequestKeyValue("/login", "POST"), new LoginActionController());
->>>>>>> branch 'master' of https://github.com/kimchman3342/ITburger.git
 	}
 	public static Controller getController(RequestKeyValue key) {
 		return mapping.get(key);
